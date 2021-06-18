@@ -4,8 +4,8 @@ body {
 
 #bodybackground {
     color: #b3b3b3;
-    background: black;
     font-family: Helvetica; Arial; 
+    background: black
 }
 
 .logoclass {
@@ -22,6 +22,8 @@ body {
     color: #b3b3b3;
 }
 
+
+
 #navbarSupportedContent > ul > li > a:hover {
     color: white;
 }
@@ -30,14 +32,58 @@ body {
         color: white;
 }
 
-#scrollablecolumn1 {
-    height: 500px;
+
+@media (min-width: 320px) {
+    #scrollablecolumn1 {height: 350px;
+        overflow-y: auto;
+      
+    }
+    #scrollablecolumn2 {height: 350px;
+        overflow-y: auto;
+       
+    }
+    #scrollablecolumn2 > div.container.mt-3 > div > div.col-6.col-sm-9.col-md-8.pt-2 > div > div:nth-child(2) > h1 {
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    #scrollablecolumn1 {
+    height: 450px;
     overflow-y: auto;
+    
 }
 
 #scrollablecolumn2 {
-    height: 500px;
+    height: 450px;
     overflow-y: auto;
+   
+}
+#scrollablecolumn2 > div.container.mt-3 > div > div.col-6.col-sm-9.col-md-8.pt-2 > div > div:nth-child(2) > h1 {
+    font-size: 26px;
+}
+}
+
+@media (min-width: 1024px) {
+    #scrollablecolumn1 {height: 500px;
+        overflow-y: auto;
+    }
+    #scrollablecolumn2 {height: 500px;
+        overflow-y: auto;}
+    #scrollablecolumn2 > div.container.mt-3 > div > div.col-6.col-sm-9.col-md-8.pt-2 > div > div:nth-child(2) > h1 {
+            font-size: 36px;
+        }
+}
+
+@media (min-width: 1200px) {
+    #scrollablecolumn1 {height: 600px;
+        overflow-y: auto;
+    }
+    #scrollablecolumn2 {height: 600px;
+        overflow-y: auto;}
+    #scrollablecolumn2 > div.container.mt-3 > div > div.col-6.col-sm-9.col-md-8.pt-2 > div > div:nth-child(2) > h1 {
+            font-size: 46px;
+        }
 }
 
 .songslist {
@@ -45,9 +91,6 @@ body {
     line-height: 0.75rem;
 }
 
-.secondcolumn {
-    background: #9E3780;
-}
 
 i {
     color: black;
@@ -74,7 +117,7 @@ i {
   } 
 
 .customizearrow {
-    width: 1.3rem;
+    width: 3rem;
     opacity: 0.6;
     transition: 0.3s;
 }
@@ -107,7 +150,6 @@ i {
 }
 
 .gradient {
-    
     background: rgb(164,57,134);
     background: linear-gradient(180deg, rgba(164,57,134,1) 0%, rgba(129,46,106,1) 40%, rgba(0,0,0,1) 70%);
 }
@@ -134,25 +176,38 @@ h6 {
     font-size: 10px;
     color:white;
 }
-
-#scrollablecolumn2 > div > ol > li:hover {
+/*
+#scrollablecolumn2 > div:nth-child(5) > ol > li:hover {
     background: gray;
     opacity: 0.4;
+  
+}
+*/
+
+#scrollablecolumn2 > div:nth-child(5) > ol > svg {
+    width: 12px;
+    
 }
 
-#scrollablecolumn2 > div > ol > li:hover h6 {
-    color: white;
+#scrollablecolumn2 > div:nth-child(5) > ol > li > svg {
+    width: 12px;
+} 
+ /*
+#scrollablecolumn2 > div:nth-child(5) > ol > li:hover svg {
     opacity: 1;
 }
+
+#scrollablecolumn2 > div:nth-child(5) > ol > li:hover h6 {
+    opacity: 1;
+}
+*/
 
 form > div > ul > li > strong:hover {
     text-decoration: underline;
 }
 
-
-.liststyle h6 {
-    font-size: 13px;
-    font-weight: bold;
+#scrollablecolumn2 > div:nth-child(5) > ol > li.liststyle.small > h6 {
+    font-size: 14px;
 }
 
 .fontsmallersize {
@@ -180,7 +235,104 @@ div.cardbackground:hover .imageoverlay {
     opacity: 1;
 }
 
-.footercontainer {
-      height: 1rem;
 
+.footer{
+    position: fixed;
+    bottom: 0;
+    z-index: 5;
+    width: 100%;
+    background-color: #1d1d1d;
+}
+
+.group img{
+    width: 75px;
+    padding: 5px;
+    
+}
+
+.group{
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.controls{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    position: relative;
+}
+
+.controls .icons{
+    width: 15px;
+    height: 15px;
+    
+}
+
+
+.control-panel{
+    border-bottom: 5px solid  rgb(133, 133, 133);
+    width: 500px;
+    text-align: center;
+    padding-bottom: 7px;
+}
+
+
+.control-panel img{
+    margin: 0 12px;
+}
+
+.extras img{
+    margin: 0 12px;
+}
+
+
+
+.toMove{
+    font-size: 12px;
+    position: absolute;
+    bottom: 5px;
+    left: 100px;
+}
+
+.toMove img{
+    margin-left: 5px;
+}
+
+.icons img{
+    width: 30px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 45%;
+    background-color: transparent;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #2AF731;
+    border-radius: 1px;
+
+
+  }
+  input[type=range]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 4px #000000;
+    border: 0px solid #135078;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #C4C4C4;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -6.5px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #2AF731;
   }

@@ -1,5 +1,5 @@
 .navbar {
-  background-color: black;
+  background-color: #060609;
   color: rgb(133, 127, 127);
   height: 470px;
   min-width: 210px;
@@ -412,3 +412,70 @@ input[type="range"]:focus::-webkit-slider-runnable-track {
   text-align: center;
   margin-left: 10px;
 }
+
+
+
+.playbutton:hover {
+    transform: scale(1.1);
+}
+
+.heartdots:hover {
+    color:white;
+}
+
+
+
+h6 {
+    font-size: 10px;
+    color:white;
+}
+
+#scrollablecolumn2 > div > ol > li:hover {
+    background: gray;
+    opacity: 0.4;
+}
+
+#scrollablecolumn2 > div > ol > li:hover h6 {
+    color: white;
+    opacity: 1;
+}
+
+form > div > ul > li > strong:hover {
+    text-decoration: underline;
+}
+
+
+.liststyle h6 {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.fontsmallersize {
+    font-size: 0.5rem;
+}
+
+
+div.cardbackground {
+    background: rgba(40, 40, 40, 0);
+    transition: 0.3s;
+    border: none;
+}
+
+div.cardbackground:hover {
+    background: rgba(40, 40, 40, 0.8);
+
+}
+
+.imageoverlay {
+    opacity: 1;
+
+}
+
+div.cardbackground:hover .imageoverlay {
+    opacity: 1;
+}
+
+.footercontainer {
+      height: 1rem;
+
+  }
